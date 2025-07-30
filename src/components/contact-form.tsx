@@ -41,11 +41,14 @@ export function ContactForm() {
     },
   });
 
+  // TODO: Implement Firestore submission
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
     toast({
       title: "Message Sent!",
       description: "Thanks for reaching out. We'll get back to you soon.",
+      variant: 'default',
+      className: 'bg-green-500 text-white'
     });
     form.reset();
   }
@@ -60,7 +63,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="Your Name" {...field} />
+                <Input placeholder="Your Name" {...field} className="bg-background/80" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -73,7 +76,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input placeholder="your.email@example.com" {...field} />
+                <Input placeholder="your.email@example.com" {...field} className="bg-background/80" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -88,7 +91,7 @@ export function ContactForm() {
               <FormControl>
                 <Textarea
                   placeholder="Tell us what you're thinking about..."
-                  className="resize-none"
+                  className="resize-none bg-background/80"
                   {...field}
                 />
               </FormControl>

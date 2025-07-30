@@ -6,130 +6,111 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Coffee, FileCode2, Globe, Braces } from 'lucide-react';
-import { PythonIcon } from '@/components/python-icon';
-import { ContactForm } from '@/components/contact-form';
+import { FaJava, FaPython, FaCode } from 'react-icons/fa';
+import Link from 'next/link';
 
-const courses = [
-  {
-    name: 'C Programming',
-    description:
-      'Master the fundamentals of C, a powerful language for system programming.',
-    icon: <FileCode2 className="h-10 w-10 text-primary" />,
-    hint: 'code block',
-  },
-  {
-    name: 'C++ Development',
-    description:
-      'Explore object-oriented programming and build high-performance applications.',
-    icon: <Braces className="h-10 w-10 text-primary" />,
-    hint: 'modern office',
-  },
-  {
-    name: 'Java',
-    description:
-      'Learn the versatile, platform-independent language used in enterprise-level apps.',
-    icon: <Coffee className="h-10 w-10 text-primary" />,
-    hint: 'coffee code',
-  },
-  {
-    name: 'Python',
-    description:
-      'Dive into Python for web development, data science, and automation.',
-    icon: <PythonIcon className="h-10 w-10 text-primary" />,
-    hint: 'python snake',
-  },
-  {
-    name: 'Web Development',
-    description: 'Build modern, responsive websites and web applications from scratch.',
-    icon: <Globe className="h-10 w-10 text-primary" />,
-    hint: 'web design',
-  },
-];
+const testimonials = [
+    {
+        quote: "This academy transformed my coding skills. The hands-on projects were incredibly valuable.",
+        name: "Alex Johnson",
+        title: "Fullstack Developer",
+    },
+    {
+        quote: "The instructors are amazing! They are patient, knowledgeable, and always willing to help.",
+        name: "Maria Garcia",
+        title: "Software Engineer at Google",
+    },
+    {
+        quote: "I landed my dream job after completing the Fullstack course. I can't recommend dev2build enough!",
+        name: "James Lee",
+        title: "Frontend Developer at Amazon",
+    }
+]
 
 export default function Home() {
   return (
-    <>
-      <section className="w-full py-20 md:py-32 lg:py-40">
-        <div className="container px-4 text-center md:px-6">
-          <div className="mx-auto max-w-3xl">
-            <h1 className="font-headline text-4xl font-bold tracking-tighter text-primary sm:text-5xl md:text-6xl">
-              Welcome to Dev2Build Hub
-            </h1>
-            <p className="font-body mt-4 text-lg text-muted-foreground md:text-xl">
-              Your journey to becoming a skilled developer starts here. We
-              provide high-quality courses to help you master programming
-              languages and build real-world projects.
-            </p>
-            <div className="mt-6">
-              <Button
-                asChild
-                size="lg"
-                className="bg-accent text-accent-foreground hover:bg-accent/90"
-              >
-                <a href="#courses">Explore Courses</a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div className="flex flex-col min-h-screen">
+      <main className="flex-1">
+        <section className="w-full h-[90vh] flex items-center justify-center relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-background to-blue-900/50 z-0"></div>
+            <div className="absolute inset-0 z-10 bg-grid-white/[0.05]"></div>
 
-      <section id="courses" className="w-full bg-card py-20 md:py-24 lg:py-32">
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <h2 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-5xl">
-                Our Courses
-              </h2>
-              <p className="font-body mx-auto max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                We offer a curated selection of courses designed to take you
-                from beginner to pro.
-              </p>
-            </div>
-          </div>
-          <div className="mx-auto grid grid-cols-1 gap-6 py-12 sm:grid-cols-2 md:grid-cols-3 lg:gap-12">
-            {courses.map((course) => (
-              <Card
-                key={course.name}
-                className="flex transform flex-col items-center p-6 text-center shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl"
-                data-ai-hint={course.hint}
-              >
-                <CardHeader className="items-center">
-                  {course.icon}
-                  <CardTitle className="font-headline mt-4">
-                    {course.name}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="font-body">
-                    {course.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+            {/* Floating Icons */}
+            <FaJava className="absolute top-[20%] left-[10%] text-5xl text-accent/20 animate-bounce" />
+            <FaPython className="absolute top-[50%] right-[15%] text-6xl text-accent/20 animate-pulse" />
+            <FaCode className="absolute bottom-[25%] left-[20%] text-4xl text-accent/20 animate-spin-slow" />
+            <FaCode className="absolute bottom-[20%] right-[10%] text-5xl text-accent/20 animate-bounce" />
 
-      <section id="contact" className="w-full py-20 md:py-24 lg:py-32">
-        <div className="container px-4 md:px-6">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="font-headline text-3xl font-bold tracking-tighter text-primary sm:text-5xl">
-              Get in Touch
+
+            <div className="container px-4 md:px-6 text-center z-20">
+                <div className="flex flex-col justify-center space-y-4">
+                    <div className="space-y-2">
+                        <h1 className="text-5xl font-bold tracking-tighter sm:text-7xl xl:text-8xl/none bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+                            Learn. Code. Build.
+                        </h1>
+                        <p className="max-w-[600px] mx-auto text-muted-foreground md:text-xl">
+                            Join dev2build to master in-demand programming skills and launch your tech career.
+                        </p>
+                    </div>
+                    <div className="w-full max-w-sm mx-auto space-x-4">
+                        <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+                           <Link href="/courses">Join Now</Link>
+                        </Button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter text-center sm:text-5xl text-accent mb-12">
+              Why Choose Us?
             </h2>
-            <p className="font-body mt-4 text-muted-foreground md:text-xl">
-              Have questions? We&apos;d love to hear from you.
-            </p>
+            <div className="mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3">
+              <div className="grid gap-1 text-center p-4 rounded-lg hover:bg-card transition-all">
+                <h3 className="text-lg font-bold">Expert-Led Courses</h3>
+                <p className="text-sm text-muted-foreground">
+                  Learn from industry professionals with years of real-world experience.
+                </p>
+              </div>
+              <div className="grid gap-1 text-center p-4 rounded-lg hover:bg-card transition-all">
+                <h3 className="text-lg font-bold">Hands-On Projects</h3>
+                <p className="text-sm text-muted-foreground">
+                  Build a portfolio of projects that showcase your skills to potential employers.
+                </p>
+              </div>
+              <div className="grid gap-1 text-center p-4 rounded-lg hover:bg-card transition-all">
+                <h3 className="text-lg font-bold">Career Support</h3>
+                <p className="text-sm text-muted-foreground">
+                  Get help with your resume, portfolio, and interview preparation.
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="mx-auto mt-12 max-w-xl">
-            <Card className="shadow-lg">
-              <CardContent className="p-6">
-                <ContactForm />
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-    </>
+        </section>
+
+        <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32 bg-card">
+            <div className="container px-4 md:px-6">
+                <h2 className="text-3xl font-bold tracking-tighter text-center sm:text-5xl text-accent mb-12">
+                    Success Stories
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {testimonials.map((testimonial) => (
+                        <Card key={testimonial.name} className="bg-background/30 backdrop-blur-sm border-accent/20">
+                            <CardContent className="pt-6">
+                                <p className="text-lg italic">"{testimonial.quote}"</p>
+                                <div className="mt-4">
+                                    <p className="font-bold">{testimonial.name}</p>
+                                    <p className="text-sm text-accent">{testimonial.title}</p>
+                                </div>
+                            </CardContent>
+                        </Card>
+                    ))}
+                </div>
+            </div>
+        </section>
+      </main>
+    </div>
   );
 }
+
