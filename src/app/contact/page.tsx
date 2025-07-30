@@ -25,7 +25,7 @@ export default function ContactPage() {
                 <h3 className="text-2xl font-bold text-accent mb-4">Our Location</h3>
                 <div className="aspect-video w-full">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.699419299443!2d-74.0083426845939!3d40.7249919793306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2598f80c6b5b5%3A0x6a0f4a7c38f45c7!2sSoHo%2C%20New%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1685373801234!5m2!1sen!2sin"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61144.97741633541!2d74.20459364973349!3d16.7082607992523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1000cdec07a29%3A0x20926754d5cf415!2sKolhapur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1685373801234!5m2!1sen!2sin"
                         width="100%"
                         height="100%"
                         style={{ border: 0, borderRadius: 'var(--radius)' }}
