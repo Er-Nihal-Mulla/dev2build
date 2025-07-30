@@ -41,7 +41,7 @@ export function SiteHeader() {
             </Link>
           </nav>
         <div className="flex flex-1 items-center justify-end space-x-2">
-          <Button asChild>
+          <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
             <Link href="/contact">Join Now</Link>
           </Button>
         </div>
