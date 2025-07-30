@@ -42,7 +42,7 @@ export default function Home() {
             <FaCode className="absolute bottom-[20%] right-[10%] text-5xl text-accent/20 animate-bounce" />
 
 
-            <div className="container px-4 md:px-6 text-center z-20">
+            <div className="container mx-auto px-4 md:px-6 text-center z-20">
                 <div className="flex flex-col justify-center space-y-4">
                     <div className="space-y-2">
                         <h1 className="text-5xl font-bold tracking-tighter sm:text-7xl xl:text-8xl/none bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
@@ -62,7 +62,7 @@ export default function Home() {
         </section>
 
         <section id="features" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter text-center sm:text-5xl text-accent mb-12">
               Why Choose Us?
             </h2>
@@ -90,7 +90,7 @@ export default function Home() {
         </section>
 
         <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32 bg-card">
-            <div className="container px-4 md:px-6">
+            <div className="container mx-auto px-4 md:px-6">
                 <h2 className="text-3xl font-bold tracking-tighter text-center sm:text-5xl text-accent mb-12">
                     Success Stories
                 </h2>
@@ -113,4 +113,3 @@ export default function Home() {
     </div>
   );
 }
-

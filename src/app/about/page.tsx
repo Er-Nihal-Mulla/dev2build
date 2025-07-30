@@ -26,7 +26,7 @@ const timeline = [
 export default function AboutPage() {
     return (
         <div className="py-12 md:py-24 lg:py-32">
-            <div className="container px-4 md:px-6">
+            <div className="container mx-auto px-4 md:px-6">
                 <section id="mission" className="text-center">
                     <h1 className="text-4xl font-bold tracking-tighter sm:text-6xl text-accent mb-4">Our Mission</h1>
                     <p className="max-w-3xl mx-auto text-muted-foreground md:text-xl">
