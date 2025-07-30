@@ -102,24 +102,28 @@ export function EnrollmentForm({ courseName, allCourses }: EnrollmentFormProps) 
             </FormItem>
           )}
         />
-        <FormField>
-          <FormItem>
-            <FormLabel>Course</FormLabel>
-            <Select onValueChange={field => form.setValue("course", field)} defaultValue={courseName}>
-                <FormControl>
-                    <SelectTrigger className="bg-background/80">
-                        <SelectValue placeholder="Select a course" />
-                    </SelectTrigger>
-                </FormControl>
-                <SelectContent className="bg-background border-accent/20">
-                    {allCourses.map(course => (
-                        <SelectItem key={course} value={course}>{course}</SelectItem>
-                    ))}
-                </SelectContent>
-            </Select>
-            <FormMessage />
-          </FormItem>
-        </FormField>
+        <FormField
+          control={form.control}
+          name="course"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Course</FormLabel>
+              <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <FormControl>
+                      <SelectTrigger className="bg-background/80">
+                          <SelectValue placeholder="Select a course" />
+                      </SelectTrigger>
+                  </FormControl>
+                  <SelectContent className="bg-background border-accent/20">
+                      {allCourses.map(course => (
+                          <SelectItem key={course} value={course}>{course}</SelectItem>
+                      ))}
+                  </SelectContent>
+              </Select>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
         <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
           Enroll Now
         </Button>
