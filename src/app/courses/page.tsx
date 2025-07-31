@@ -116,7 +116,9 @@ export default function CoursesPage() {
                     Start your coding journey with us. Fill out the form below to enroll.
                   </DialogDescription>
                 </DialogHeader>
-                <EnrollmentForm courseName={selectedCourse} allCourses={courses.map(c => c.name)} />
+                {dialogOpen && selectedCourse && (
+                  <EnrollmentForm courseName={selectedCourse} allCourses={courses.map(c => c.name)} />
+                )}
               </DialogContent>
             </Dialog>
         </div>
