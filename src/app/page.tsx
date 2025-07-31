@@ -89,6 +89,26 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="video-promo" className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container mx-auto px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter text-center sm:text-5xl text-accent mb-12">
+              A Glimpse Into dev2build
+            </h2>
+            <div className="mx-auto max-w-4xl">
+              <div className="aspect-video w-full rounded-lg overflow-hidden shadow-2xl">
+                <iframe
+                  src="https://www.youtube.com/embed/af2CwyasG-0"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32 bg-card">
             <div className="container mx-auto px-4 md:px-6">
                 <h2 className="text-3xl font-bold tracking-tighter text-center sm:text-5xl text-accent mb-12">
